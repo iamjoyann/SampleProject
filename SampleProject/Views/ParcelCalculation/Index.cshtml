@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "ParcelCalculation";
+    Layout = null;
+}
+ 
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<br />
+
+<div class="container-fluid">
+    <div class="row-fluid"> 
+        <div class="col-md-offset-4 col-md-4" id="box"> 
+            <h2>Parcel Calculator</h2>
+            <form class="form-horizontal" >
+                <fieldset>
+                  
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="input-group"> 
+                                <label for="">Weight:</label>
+                                <input type="number" id="Weight" placeholder="kg" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label for="">Height:</label>
+                                <input type="number" id="Height" placeholder="cm" class="form-control" />
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <div class="input-group">  
+                                <label for="">Width:</label>
+                                <input type="number" id="Width" placeholder="cm" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <label for="">Depth:</label>
+                                <input type="number" id="Depth" placeholder="cm" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-danger" id="btnCalculate">Calculate</button> 
+                            <button type="reset" class="btn" id="btnClear">Clear</button> 
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="form-group" style="text-align:center; display:none" id="displayCost">
+                                <span>The parcel costs </span><b> <span id="lblCost"></span></b>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/scripts/calculate.js"></script>
+
+    <script type="text/javascript">
+        calculate.init();
+    </script>
+
